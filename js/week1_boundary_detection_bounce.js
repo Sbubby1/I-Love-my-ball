@@ -45,6 +45,10 @@ function animate()
 	if(player.y < player.height/2){
 		player.vy *= -1;
 	}
+	
+	ball.x=canvas.width;
+	ball.x-= //Some number of pixels
+	ball.vx = -ball.vx;
 	//---------------------------------------------------
 	
 	player.draw();
