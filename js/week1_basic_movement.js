@@ -14,6 +14,7 @@ var player;
 	//Instantiate the Player
 	player = new Player();
 	player.vx = 10;
+	player.vy = 10;
 	
 	//Set the Animation Timer
 	timer = setInterval(animate, interval);
@@ -30,10 +31,19 @@ function animate()
 		//player.x = -player.width/2;
 		player.vx = -player.vx;	
 	}
+	if(player.y + player.height/2 > canvas.height){
+		//player.x = -player.width/2;
+		player.vy = -player.vy;	
+	}
+	if(player.y - player.height/2 < 0){
+		//player.x = -player.width/2;
+		player.vy = -player.vy;	
+	}
+
 
 	//Move the Player
 	player.x += player.vx;
-	
+	player.y += player.vy
 	//Update the Screen
 	// player.draw();
 	player.drawcircle();
