@@ -26,18 +26,22 @@ function animate()
 	if(player.x + player.width/2 > canvas.width){
 		//player.x = -player.width/2;
 		player.vx = -player.vx;	
+		player.color = "blue"
 	}
 	if(player.x - player.width/2 < 0){
 		//player.x = -player.width/2;
 		player.vx = -player.vx;	
+		player.color = "green"
 	}
 	if(player.y + player.height/2 > canvas.height){
 		//player.x = -player.width/2;
 		player.vy = -player.vy;	
+		player.color = "red"
 	}
 	if(player.y - player.height/2 < 0){
 		//player.x = -player.width/2;
 		player.vy = -player.vy;	
+		player.color = "black"
 	}
 
 
